@@ -1,14 +1,8 @@
-    
-    <select class="form-select form-select-lg mb-3" [(ngModel)]="selectedCatId" aria-label=".form-select-lg example">
-        <option *ngFor="let cat of categories" [value]="cat.Id">{{cat.Name}}</option>
-      </select>
     <ng-container>
-        
-        
         <div class="row">
         <div class="col-12">
             <div class="d-flex flex-wrap">
-            <div [class.d-none]="product.CatId != selectedCatId" class="card col-3 m-2" *ngFor="let product of products">
+            <div appBorderShadow BGColor="yellow" class="card col-3 m-2" *ngFor="let product of filteredProducts">
                 <div  style="height: 200px; overflow: hidden;">
                     <img class="card-img-top" src={{product.ImageUrl}} height="" alt="Samsung a21s">
                 </div>
