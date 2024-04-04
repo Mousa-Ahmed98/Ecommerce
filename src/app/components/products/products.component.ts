@@ -96,7 +96,7 @@ export class ProductsComponent implements OnChanges {
   buy(prd:IProduct){
     console.log("Event works");
     this.productToEmit = prd;
-    console.log(this.productToEmit);
+    
     this.buyProduct.emit(this.productToEmit);
   }
 }

@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from '../../app.component';
 import { ProductsComponent } from '../products/products.component';
 import { IProduct } from '../../models/iproduct';
+import { BankCardPipe } from '../../pipes/bank-card.pipe';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [CommonModule, FormsModule, ProductsComponent],
+  imports: [CommonModule, FormsModule, ProductsComponent, BankCardPipe],
   templateUrl: './order.component.html',
   styleUrl: './order.component.css'
 })
@@ -39,6 +40,7 @@ export class OrderComponent {
   }
 
   addToTable(product: any){
+    console.log("add to table");
     this.products.push(product as IProduct);
     console.log(this.products);
   }

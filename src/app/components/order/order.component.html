@@ -7,7 +7,7 @@
 </ng-container>
 
 <div>
-    <app-products [catId]="selectedCatId" (buy)="addToTable($event)"></app-products>
+    <app-products [catId]="selectedCatId" (buyProduct)="addToTable($event)"></app-products>
 </div>
 
 <table class="table">
@@ -30,4 +30,7 @@
       </ng-container>
     </tbody>
   </table>
+
+  <p>{{ '1928384729472485' | bankCard }}</p>
+  <p></p>
   
